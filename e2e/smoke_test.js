@@ -1,9 +1,7 @@
 SuiteOf("smoke");
 
-const baseUrl = process.env.BASE_URL || "http://localhost:3000";
-
 Scenario("Webサイトを開きログインする", ({ I }) => {
-  I.amOnPage(baseUrl);
+  I.amOnPage("/");
   I.click("ログインする");
   I.fillField("ユーザー名", "user1");
   I.fillField("パスワード", "super-strong-passphrase");
